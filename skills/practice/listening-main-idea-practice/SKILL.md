@@ -1,6 +1,10 @@
 ---
 name: listening-main-idea-practice
 description: 开展每天 10–15 分钟的听力中心理解自我练习。适用于学生需要从短音频中抓住中心、区分主次、过滤干扰或延迟复述要点时。
+metadata:
+  index:
+    summary_zh: 每天 10–15 分钟的听力中心理解自我练习。
+    summary_en: A daily 10–15 minute self-practice for grasping the main idea in listening.
 ---
 
 # Listening Main-Idea Practice
@@ -39,4 +43,3 @@ description: 开展每天 10–15 分钟的听力中心理解自我练习。适�
 在可安全控制音量的前提下，加入轻音乐或说话声背景，仍只要求学生说出中心句。
 
 如果无法提供真实的声音环境，跳过本项；不要用文字描述模拟干扰听。
-

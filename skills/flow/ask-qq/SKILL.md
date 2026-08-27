@@ -2,6 +2,10 @@
 name: ask-qq
 description: Explain QQ's tutoring-skill collection and suggest the right next skill or a simple next step for a middle-school learning question. Use when someone asks what these skills do or where to begin.
 disable-model-invocation: true
+metadata:
+  index:
+    summary_zh: 解释这套 skills，并根据当前困惑推荐下一步。
+    summary_en: Explains this collection and recommends a next step for the current tutoring situation.
 ---
 
 # Ask QQ

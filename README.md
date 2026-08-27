@@ -28,12 +28,14 @@ npx skills@latest update
 
 ## 当前技能索引
 
-这是当前可用 skills 的名称和简要说明。新增、删除或重命名 skill 时，必须同步更新此表和英文 README 中的对应表。
+这是当前可用 skills 的名称和简要说明，由各 skill 的索引元数据自动生成。
 
+<!-- current-skill-index:start -->
 | 分类 | Skill | 用途 | 调用方式 |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
 | `practice` | [`listening-main-idea-practice`](./skills/practice/listening-main-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习。 | 可由用户或 Agent 调用 |
+<!-- current-skill-index:end -->
 
 ## 项目组织
 

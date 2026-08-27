@@ -13,12 +13,12 @@
 
 ## Current skill index
 
-The `## 当前技能索引` table in `README.md` and the `## Current skill index` table in `README.en.md` are the authoritative human-facing index of currently available skills.
+The `## 当前技能索引` table in `README.md` and the `## Current skill index` table in `README.en.md` are generated human-facing indexes of currently available skills.
 
 When adding, removing, renaming, moving, or materially changing a skill:
 
-1. Update both tables in the same change.
-2. Keep the exact skill name, category, relative link, one-sentence purpose, and invocation mode accurate.
-3. List only skills that currently exist in this repository; do not list proposed, retired, or external skills.
+1. Set `metadata.index.summary_zh` and `metadata.index.summary_en` in the skill's `SKILL.md` frontmatter.
+2. Run `ruby scripts/update-skill-index.rb` to regenerate both README tables.
+3. Run `ruby scripts/update-skill-index.rb --check` before committing.
 
-Keep the descriptions concise and useful for someone choosing a skill. The index should become more complete as the collection grows.
+The script derives the name, category, relative link, and invocation mode from each existing skill. Never edit content between the `current-skill-index` markers by hand. Keep both summaries concise and useful for someone choosing a skill; the index will then grow automatically with the collection.

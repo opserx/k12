@@ -28,12 +28,14 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 
 ## Current skill index
 
-This is the name-and-summary index of currently available skills. When a skill is added, removed, or renamed, update this table and its Chinese counterpart in the same change.
+This is the name-and-summary index of currently available skills, generated from the index metadata of each skill.
 
+<!-- current-skill-index:start -->
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
 | `practice` | [`listening-main-idea-practice`](./skills/practice/listening-main-idea-practice/SKILL.md) | A daily 10–15 minute self-practice for grasping the main idea in listening. | User or agent invocation |
+<!-- current-skill-index:end -->
 
 ## Project organization
 
