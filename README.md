@@ -38,6 +38,12 @@ npx skills@latest update
 
 全局设计和规范文档统一随 [`ask-qq`](./skills/flow/ask-qq/SKILL.md) 分发，位于其 [`references/`](./skills/flow/ask-qq/references/project-organization.md) 中。当前只有目录说明；其他设计和规范将在达成具体约定后逐步补充。`ask-qq` 会读取这些文档，作为解释集合和推荐流程的依据。
 
+## 全局参考资料
+
+| 文件 | 内容 |
+| --- | --- |
+| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | 三类 skill 目录的职责，以及全局参考资料的存放规范。 |
+
 ## 参考
 
 本项目借鉴了 [mattpocock/skills](https://github.com/mattpocock/skills) 的思想：用可组合的技能目录、`SKILL.md` 入口和 `skills` 安装器分发；这里不包含其插件清单或任何 Claude Code/ChatGPT 专属约束。

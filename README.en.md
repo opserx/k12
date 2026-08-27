@@ -38,6 +38,12 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 
 Global design and convention documents are distributed with [`ask-qq`](./skills/flow/ask-qq/SKILL.md), in its [`references/`](./skills/flow/ask-qq/references/project-organization.md) directory. It currently contains only the directory layout; other documents will be added as decisions are made. `ask-qq` reads these documents when it explains the collection or recommends a flow.
 
+## Global references
+
+| File | Contents |
+| --- | --- |
+| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | Responsibilities of the three skill directories and the convention for global reference material. |
+
 ## Inspiration
 
 The project takes inspiration from [mattpocock/skills](https://github.com/mattpocock/skills): composable skill directories, `SKILL.md` entrypoints, and distribution through the `skills` installer. It deliberately omits that project's plugin manifests and all Claude Code/ChatGPT-specific constraints.
