@@ -1,5 +1,11 @@
 # QQ Skills Repository
 
+## Document roles and authority
+
+- `AGENTS.md` is for AI agents working in this repository. It defines the repository-maintenance instructions in this file.
+- [`skills/flow/ask-qq/references/`](skills/flow/ask-qq/references/) contains the authoritative project design and convention documents. When a project-design or convention question arises, read the relevant reference and follow it.
+- `README.md` and `README.en.md` are user-facing documents. They explain the collection, installation, and the currently available skills; they are not the source of project-design rules.
+
 ## Read first
 
 - The global project conventions are in [project-organization.md](skills/flow/ask-qq/references/project-organization.md).
@@ -16,4 +22,3 @@ When adding, removing, renaming, moving, or materially changing a skill:
 3. List only skills that currently exist in this repository; do not list proposed, retired, or external skills.
 
 Keep the descriptions concise and useful for someone choosing a skill. The index should become more complete as the collection grows.
-
