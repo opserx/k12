@@ -76,4 +76,4 @@ metadata:
 
 ## 导出
 
-本 skill 支持 `k12-export`。只有用户要求导出本次练习时，读取 [导出模板](references/export-template.md)，并按其结构整理已经出现的材料。
+本 skill 支持 `k12-export`，导出来源名称为 `k12-writing-prompted-practice-chinese`。只有用户要求导出本次练习时，读取 [导出模板](references/export-template.md)，并按其结构整理已经出现的材料。

@@ -30,7 +30,7 @@ k12-<方面>-<技能目的>[-<学科>]
 
 目录分类与名称的方面是两个维度：分类决定文件放在 `flow`、`tutoring` 还是 `practice`；方面说明它训练什么。名称让安装后扁平展示的 skill 仍然可识别。
 
-`k12-ask-qq` 是唯一的结构例外：它是面向用户的全局路由名称，不使用方面、目的和学科段，但仍必须保留 `k12-` 前缀。
+流程基础设施 skill 可以使用 `k12-<流程>[-<动作>]`：当前为 `k12-ask-qq`、`k12-export` 与 `k12-export-enable`。它们不使用方面、目的和学科段，但仍必须保留 `k12-` 前缀。
 
 ## 数据字典
 
@@ -58,6 +58,7 @@ LuneTree 的 `chinese-writing-practice` 已拆为以下四个独立 skill，不�
 | 语言提升 | `tutoring` | `k12-writing-language-revision-chinese` |
 | 近义词练习 | `practice` | `k12-writing-synonym-matching-chinese` |
 | 导出材料 | `flow` | `k12-export` |
+| 为已有 skill 启用导出 | `flow` | `k12-export-enable` |
 
 ## `references/` 目录规范
 

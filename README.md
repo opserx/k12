@@ -29,6 +29,7 @@ npx skills@latest update
 | --- | --- | --- | --- |
 | `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
 | `flow` | [`k12-export`](./skills/flow/k12-export/SKILL.md) | 按来源 skill 的模板，将本次学习材料导出为 chat 回复或 PDF。 | 可由用户或 Agent 调用 |
+| `flow` | [`k12-export-enable`](./skills/flow/k12-export-enable/SKILL.md) | 为已有 skill 添加可由 `k12-export` 使用的来源声明和导出模板。 | 可由用户或 Agent 调用 |
 | `practice` | [`k12-listening-main-idea-practice`](./skills/practice/k12-listening-main-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习。 | 可由用户或 Agent 调用 |
 | `practice` | [`k12-writing-synonym-matching-chinese`](./skills/practice/k12-writing-synonym-matching-chinese/SKILL.md) | 中文近义词和近义成语的三对三填空辨析练习。 | 可由用户或 Agent 调用 |
 | `tutoring` | [`k12-writing-language-revision-chinese`](./skills/tutoring/k12-writing-language-revision-chinese/SKILL.md) | 中文病文修改：辨析信息、节奏和修饰问题，再比较最佳例文。 | 可由用户或 Agent 调用 |
