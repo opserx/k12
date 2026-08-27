@@ -50,14 +50,12 @@ k12-<方面>-<技能目的>[-<学科>]
 
 ### 中文写作技能
 
-LuneTree 的 `chinese-writing-practice` 已拆为以下四个独立 skill，不保留父 skill：
-
-| 原流程 | 分类 | 名称 |
-| --- | --- | --- |
-| 命题写作 | `tutoring` | `k12-writing-prompted-practice-chinese` |
-| 语言提升 | `tutoring` | `k12-writing-language-revision-chinese` |
-| 近义词练习 | `practice` | `k12-writing-synonym-matching-chinese` |
-| 为已有 skill 启用内部导出 | `flow`（内部） | `k12-export-enable` |
+| 分类 | 名称 |
+| --- | --- |
+| `tutoring` | `k12-writing-prompted-practice-chinese` |
+| `tutoring` | `k12-writing-language-revision-chinese` |
+| `practice` | `k12-writing-synonym-matching-chinese` |
+| `flow`（内部） | `k12-export-enable` |
 
 ## `references/` 目录规范
 
