@@ -28,21 +28,23 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 
 ## Current skills
 
-| Skill | Purpose | Invocation |
-| --- | --- | --- |
-| [`ask-qq`](./skills/learning/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
-| [`lesson-planner`](./skills/learning/lesson-planner/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
-| [`practice-review`](./skills/learning/practice-review/SKILL.md) | Blank starter skill for reviewing practice and mistakes. | User or agent invocation |
+| Category | Skill | Purpose | Invocation |
+| --- | --- | --- | --- |
+| `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
+| `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
+| `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | Blank starter skill for reviewing self-practice and mistakes. | User or agent invocation |
 
 ## Layout convention
 
 ```text
 skills/
-└── learning/
-    ├── ask-qq/
-    │   └── SKILL.md
-    ├── lesson-planner/
-    │   └── SKILL.md
+├── flow/                         # flows and skill routing
+│   └── ask-qq/
+│       └── SKILL.md
+├── tutoring/                     # tutoring
+│   └── lesson-planner/
+│       └── SKILL.md
+└── practice/                     # self-practice
     └── practice-review/
         └── SKILL.md
 ```
@@ -72,4 +74,3 @@ Keep `name` equal to the directory name. `description` is for discovery and rout
 ## Inspiration
 
 The project takes inspiration from [mattpocock/skills](https://github.com/mattpocock/skills): composable skill directories, `SKILL.md` entrypoints, and distribution through the `skills` installer. It deliberately omits that project's plugin manifests and all Claude Code/ChatGPT-specific constraints.
-

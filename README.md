@@ -28,21 +28,23 @@ npx skills@latest update
 
 ## 当前 Skills
 
-| Skill | 用途 | 调用方式 |
-| --- | --- | --- |
-| [`ask-qq`](./skills/learning/ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
-| [`lesson-planner`](./skills/learning/lesson-planner/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
-| [`practice-review`](./skills/learning/practice-review/SKILL.md) | 空白起步 skill：以后用于复盘练习与错题。 | 可由用户或 Agent 调用 |
+| 分类 | Skill | 用途 | 调用方式 |
+| --- | --- | --- | --- |
+| `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
+| `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
+| `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | 空白起步 skill：以后用于复盘自我练习与错题。 | 可由用户或 Agent 调用 |
 
 ## 目录约定
 
 ```text
 skills/
-└── learning/
-    ├── ask-qq/
-    │   └── SKILL.md
-    ├── lesson-planner/
-    │   └── SKILL.md
+├── flow/                         # 流程与技能路由
+│   └── ask-qq/
+│       └── SKILL.md
+├── tutoring/                     # 辅导
+│   └── lesson-planner/
+│       └── SKILL.md
+└── practice/                     # 自我练习
     └── practice-review/
         └── SKILL.md
 ```
@@ -72,4 +74,3 @@ description: 用一句话说明它做什么，以及何时使用。
 ## 参考
 
 本项目借鉴了 [mattpocock/skills](https://github.com/mattpocock/skills) 的思想：用可组合的技能目录、`SKILL.md` 入口和 `skills` 安装器分发；这里不包含其插件清单或任何 Claude Code/ChatGPT 专属约束。
-

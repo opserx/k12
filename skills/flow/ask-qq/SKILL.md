@@ -8,12 +8,12 @@ disable-model-invocation: true
 
 You do not need to remember this collection. Ask here first.
 
-This is a small, portable collection for QQ's after-school tutoring. It currently contains two blank starter skills plus this router:
+This is a small, portable collection for QQ's after-school tutoring. Its skills are grouped into three categories:
 
-- `lesson-planner`: use when the goal is to prepare one tutoring session.
-- `practice-review`: use when the goal is to look back at completed practice, mistakes, or a study attempt.
+- `flow`: flows and routing. This skill belongs here; future process-related skills also belong here.
+- `tutoring`: tutoring skills. `lesson-planner` is a blank starter for preparing one session.
+- `practice`: self-practice skills. `practice-review` is a blank starter for looking back at completed practice, mistakes, or a study attempt.
 
 First identify the immediate need in plain language. Recommend the one matching skill, or say that the collection has no suitable skill yet. Do not pretend that blank starter skills already contain a method.
 
 When the request is unclear, ask one short, age-appropriate question about the subject, the specific difficulty, or the desired help. Keep the tone kind, direct, and suitable for a new middle-school student.
-
