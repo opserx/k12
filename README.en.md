@@ -31,8 +31,7 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
-| `tutoring` | [`tutoring-lesson-planning`](./skills/tutoring/tutoring-lesson-planning/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
-| `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | Blank starter skill for reviewing self-practice and mistakes. | User or agent invocation |
+| `practice` | [`listening-main-idea-practice`](./skills/practice/listening-main-idea-practice/SKILL.md) | A daily 10–15 minute self-practice for grasping the main idea in listening. | User or agent invocation |
 
 ## Project organization
 

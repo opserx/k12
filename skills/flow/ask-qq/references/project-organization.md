@@ -35,8 +35,7 @@ skills/
 
 | 用途 | 分类 | 名称 |
 | --- | --- | --- |
-| 设计一节不区分学科的辅导课 | `tutoring` | `tutoring-lesson-planning` |
-| 复盘不区分学科的自我练习 | `practice` | `practice-review` |
+| 练习从听力材料中抓住中心 | `practice` | `listening-main-idea-practice` |
 
 ### 中文写作技能拆分命名
 
