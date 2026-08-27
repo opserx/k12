@@ -1,6 +1,6 @@
 # 圈圈的课外辅导 Skills
 
-[English](./README.en.md) · [项目文档](./docs/README.md) · [贡献指南](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[English](./README.en.md) · [项目组织规范](./skills/flow/ask-qq/references/project-organization.md) · [贡献指南](./CONTRIBUTING.md) · [MIT License](./LICENSE)
 
 这是为我刚上初中的儿子 **圈圈** 做的一套课外辅导 Agent Skills。它们把辅导中反复出现的做法写成小而独立、可以组合的指令：先弄清孩子的问题，再选择合适的学习活动，最后根据实际反馈调整。
 
@@ -36,7 +36,7 @@ npx skills@latest update
 
 ## 项目组织
 
-当前已确定的目录说明维护在 [docs/](./docs/README.md)。其他设计和规范将在达成具体约定后逐步补充；`ask-qq` 会读取现有说明，作为解释集合和推荐流程的依据。
+全局设计和规范文档统一随 [`ask-qq`](./skills/flow/ask-qq/SKILL.md) 分发，位于其 [`references/`](./skills/flow/ask-qq/references/project-organization.md) 中。当前只有目录说明；其他设计和规范将在达成具体约定后逐步补充。`ask-qq` 会读取这些文档，作为解释集合和推荐流程的依据。
 
 ## 参考
 

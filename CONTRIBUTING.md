@@ -1,6 +1,6 @@
 # Contributing
 
-Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project organization document](./docs/README.md) for the current categories.
+Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project organization document](./skills/flow/ask-qq/references/project-organization.md) for the current categories.
 
 - Use lowercase kebab-case names.
 - Include YAML frontmatter with `name` and a focused `description`.

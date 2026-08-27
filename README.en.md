@@ -1,6 +1,6 @@
 # QQ's After-School Tutoring Skills
 
-[中文](./README.md) · [Project documentation](./docs/README.md) · [Contributing](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[中文](./README.md) · [Project organization](./skills/flow/ask-qq/references/project-organization.md) · [Contributing](./CONTRIBUTING.md) · [MIT License](./LICENSE)
 
 This is a collection of agent skills for after-school tutoring, made for my son **QQ**, who has just started middle school. The collection turns repeatable tutoring habits into small, composable instructions: understand the learner's question first, choose a suitable learning activity, then adapt to real feedback.
 
@@ -36,7 +36,7 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 
 ## Project organization
 
-The currently agreed directory layout is maintained in [docs/](./docs/README.md). Other design and convention documents will be added as decisions are made; `ask-qq` reads the available documentation when it explains the collection or recommends a flow.
+Global design and convention documents are distributed with [`ask-qq`](./skills/flow/ask-qq/SKILL.md), in its [`references/`](./skills/flow/ask-qq/references/project-organization.md) directory. It currently contains only the directory layout; other documents will be added as decisions are made. `ask-qq` reads these documents when it explains the collection or recommends a flow.
 
 ## Inspiration
 
