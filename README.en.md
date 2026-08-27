@@ -1,6 +1,6 @@
 # QQ's After-School Tutoring Skills
 
-[中文](./README.md) · [Contributing](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[中文](./README.md) · [Project documentation](./docs/README.md) · [Contributing](./CONTRIBUTING.md) · [MIT License](./LICENSE)
 
 This is a collection of agent skills for after-school tutoring, made for my son **QQ**, who has just started middle school. The collection turns repeatable tutoring habits into small, composable instructions: understand the learner's question first, choose a suitable learning activity, then adapt to real feedback.
 
@@ -34,42 +34,9 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 | `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | Blank starter skill for reviewing self-practice and mistakes. | User or agent invocation |
 
-## Layout convention
+## Design and conventions
 
-```text
-skills/
-├── flow/                         # flows and skill routing
-│   └── ask-qq/
-│       └── SKILL.md
-├── tutoring/                     # tutoring
-│   └── lesson-planner/
-│       └── SKILL.md
-└── practice/                     # self-practice
-    └── practice-review/
-        └── SKILL.md
-```
-
-The smallest portable skill format is:
-
-```markdown
----
-name: skill-name
-description: One sentence saying what the skill does and when to use it.
----
-
-# Skill title
-
-Task-specific instructions for the agent.
-```
-
-Keep `name` equal to the directory name. `description` is for discovery and routing. Keep the body to guidance that materially changes an agent's decisions. Larger skills may add `references/`, `scripts/`, or `assets/` when needed, but product-specific configuration is not part of this portable format.
-
-## Principles
-
-- **Learner first:** understand the question, goal, and current feelings before optimizing anything.
-- **Small and composable:** each skill has one job and can work with others.
-- **Tool neutral:** skill files assume no specific model, CLI, plugin, or cloud service.
-- **Editable and traceable:** everything lives in Git; the user chooses when to update.
+The project introduction, category responsibilities, directory layout, and `SKILL.md` writing conventions are maintained in [docs/](./docs/README.md). `ask-qq` reads the relevant document when it explains the collection or recommends a flow.
 
 ## Inspiration
 

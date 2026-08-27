@@ -1,6 +1,6 @@
 # 圈圈的课外辅导 Skills
 
-[English](./README.en.md) · [贡献指南](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[English](./README.en.md) · [项目文档](./docs/README.md) · [贡献指南](./CONTRIBUTING.md) · [MIT License](./LICENSE)
 
 这是为我刚上初中的儿子 **圈圈** 做的一套课外辅导 Agent Skills。它们把辅导中反复出现的做法写成小而独立、可以组合的指令：先弄清孩子的问题，再选择合适的学习活动，最后根据实际反馈调整。
 
@@ -34,42 +34,9 @@ npx skills@latest update
 | `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | 空白起步 skill：以后用于复盘自我练习与错题。 | 可由用户或 Agent 调用 |
 
-## 目录约定
+## 设计与规范
 
-```text
-skills/
-├── flow/                         # 流程与技能路由
-│   └── ask-qq/
-│       └── SKILL.md
-├── tutoring/                     # 辅导
-│   └── lesson-planner/
-│       └── SKILL.md
-└── practice/                     # 自我练习
-    └── practice-review/
-        └── SKILL.md
-```
-
-一个 skill 的最低可移植格式是：
-
-```markdown
----
-name: skill-name
-description: 用一句话说明它做什么，以及何时使用。
----
-
-# Skill title
-
-给 Agent 的、与任务直接相关的说明。
-```
-
-`name` 与目录名保持一致；`description` 用于发现与路由；正文仅保留能改变 Agent 决策的内容。复杂 skill 可以按需增加 `references/`、`scripts/` 和 `assets/`，但不把某个产品的专属配置作为通用格式的一部分。
-
-## 原则
-
-- **以孩子为中心**：先理解题目、目标和当前感受，不替孩子追求虚假的“高效”。
-- **小而可组合**：一个 skill 专注一件事，可以和其他 skills 一起使用。
-- **工具中立**：技能文件不假定特定模型、CLI、插件或云服务存在。
-- **可修改、可追踪**：所有内容都留在 Git 中，由使用者自己决定何时更新。
+项目介绍、三类技能的职责、目录约定和 `SKILL.md` 编写规范统一维护在 [docs/](./docs/README.md)。`ask-qq` 会按问题需要读取这些文档，作为解释集合和推荐流程的依据。
 
 ## 参考
 
