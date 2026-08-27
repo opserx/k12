@@ -34,7 +34,11 @@ This is the name-and-summary index of currently available skills, generated from
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
+| `flow` | [`writing-session-export-chinese`](./skills/flow/writing-session-export-chinese/SKILL.md) | Organizes the current Chinese writing session into printable teaching material. | User or agent invocation |
 | `practice` | [`listening-main-idea-practice`](./skills/practice/listening-main-idea-practice/SKILL.md) | A daily 10–15 minute self-practice for grasping the main idea in listening. | User or agent invocation |
+| `practice` | [`writing-synonym-matching-chinese`](./skills/practice/writing-synonym-matching-chinese/SKILL.md) | Chinese synonym and near-synonym idiom practice through three-to-three matching. | User or agent invocation |
+| `tutoring` | [`writing-language-revision-chinese`](./skills/tutoring/writing-language-revision-chinese/SKILL.md) | Chinese revision practice for information, pacing, and expression, with a model text. | User or agent invocation |
+| `tutoring` | [`writing-prompted-practice-chinese`](./skills/tutoring/writing-prompted-practice-chinese/SKILL.md) | Chinese prompted fragment writing, from a prompt and draft to revision and model text. | User or agent invocation |
 <!-- current-skill-index:end -->
 
 ## Project organization

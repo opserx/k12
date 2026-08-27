@@ -37,9 +37,9 @@ skills/
 | --- | --- | --- |
 | 练习从听力材料中抓住中心 | `practice` | `listening-main-idea-practice` |
 
-### 中文写作技能拆分命名
+### 中文写作技能
 
-LuneTree 当前的 `chinese-writing-practice` 包含四个流程；迁入本项目时，拆为以下四个独立 skill，而不保留父 skill：
+LuneTree 的 `chinese-writing-practice` 已拆为以下四个独立 skill，不保留父 skill：
 
 | 原流程 | 分类 | 名称 |
 | --- | --- | --- |
