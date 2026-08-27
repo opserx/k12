@@ -6,19 +6,33 @@ This is a collection of skills for middle-school after-school tutoring. Install 
 
 ## Installation
 
-Install with [skills.sh](https://skills.sh):
+This repository keeps one skill per directory. [skills.sh](https://skills.sh) installs them as ordinary local files you can inspect and edit; it does not change them in the background.
+
+### Install selected skills
 
 ```bash
 npx skills@latest add opserx/k12
 ```
 
-Choose the skills and target agent when prompted. To update installed skills later:
+Choose the skills and target agent when prompted.
+
+### Install the complete collection
+
+```bash
+npx skills@latest add opserx/k12 --skill '*'
+```
+
+This selects every skill currently in this repository; choose the target agent when prompted.
+
+### Update
 
 ```bash
 npx skills@latest update
 ```
 
-You can also copy the skill directories you need into your agent's skills directory.
+This checks and updates every skill installed through `skills.sh` to the latest version from its source. If you installed skills from other sources too, they are checked and updated as well. As with [Matt Pocock's skills](https://github.com/mattpocock/skills), updates happen only when you run the command.
+
+You can also copy skill directories into your agent's skills directory. A manual copy has no tracked source, so you must compare and update it yourself.
 
 ## Current skill index
 

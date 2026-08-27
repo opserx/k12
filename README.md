@@ -6,19 +6,33 @@
 
 ## 安装
 
-使用 [skills.sh](https://skills.sh) 安装：
+本仓库保持“一个 skill 一个目录”的组织方式。使用 [skills.sh](https://skills.sh) 安装后，skill 会成为你本地可查看、可修改的普通文件；它不会在后台自动改动。
+
+### 按需安装
 
 ```bash
 npx skills@latest add opserx/k12
 ```
 
-按提示选择要安装的 skill 和目标 Agent。之后可用以下命令更新已安装的 skills：
+按提示选择需要的 skill 和目标 Agent。
+
+### 一次安装全部
+
+```bash
+npx skills@latest add opserx/k12 --skill '*'
+```
+
+这会选择本仓库当前全部 skills；按提示选择要安装到的 Agent。
+
+### 升级
 
 ```bash
 npx skills@latest update
 ```
 
-也可以把所需的 skill 目录复制到 Agent 的 skills 目录中。
+这会把通过 `skills.sh` 安装的 skills 更新到各自来源的最新版本；若你同时安装了其他来源的 skills，它们也会一起检查和更新。和 [Matt Pocock 的 skills](https://github.com/mattpocock/skills) 一样，更新由你主动执行，而不会在后台发生。
+
+也可以把所需的 skill 目录复制到 Agent 的 skills 目录中；这种手动安装没有可追踪的来源，之后需要自行比较和更新。
 
 ## 当前技能索引
 
