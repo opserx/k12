@@ -18,4 +18,6 @@ Use the documented directory structure as the source of truth. Do not claim that
 
 First identify the immediate need in plain language. Recommend the one matching skill, or say that the collection has no suitable skill yet.
 
+When an agent is maintaining this collection and needs to add `k12-export` support to an existing skill, route the internal maintenance task to `k12-export-enable`. Do not present that internal capability as a user-selectable learning skill.
+
 When the request is unclear, ask one short, age-appropriate question about the subject, the specific difficulty, or the desired help. Keep the tone kind, direct, and suitable for a new middle-school student.

@@ -32,6 +32,10 @@ def skill_entries
     index = data.dig("metadata", "index")
     abort "Missing metadata.index: #{path}" unless index.is_a?(Hash)
 
+    visibility = index.fetch("visibility", "public")
+    abort "Invalid metadata.index.visibility: #{path}" unless %w[public internal].include?(visibility)
+    next if visibility == "internal"
+
     relative_path = path.delete_prefix("#{ROOT}/")
     {
       category: File.basename(File.dirname(File.dirname(path))),
@@ -41,7 +45,7 @@ def skill_entries
       summary_en: required_string(index["summary_en"], "metadata.index.summary_en", path),
       explicit: data["disable-model-invocation"] == true
     }
-  end.sort_by { |entry| [entry[:category], entry[:name]] }
+  end.compact.sort_by { |entry| [entry[:category], entry[:name]] }
 end
 
 def table(entries, language)

@@ -11,14 +11,20 @@
 - The global project conventions are in [project-conventions.md](skills/flow/k12-ask-qq/references/project-conventions.md).
 - Follow its `k12-aspect-purpose[-subject]` naming convention for ordinary skills. `k12-ask-qq` is the explicit global-router exception.
 
+## Internal skill-development capabilities
+
+- [`k12-export-enable`](skills/flow/k12-export-enable/SKILL.md) is an internal skill-development capability, not a user-facing learning skill. Use it only when adding `k12-export` support to an existing skill.
+- Mark internal skills with `metadata.index.visibility: internal`. They must remain out of the README skill indexes, even though agents working in this repository may use them.
+- [`k12-ask-qq`](skills/flow/k12-ask-qq/SKILL.md) knows that `k12-export-enable` exists. It may route an internal skill-development request to it, but must not list or recommend it as a skill for users to invoke.
+
 ## Current skill index
 
 The `## 当前技能索引` table in `README.md` and the `## Current skill index` table in `README.en.md` are generated human-facing indexes of currently available skills.
 
 When adding, removing, renaming, moving, or materially changing a skill:
 
-1. Set `metadata.index.summary_zh` and `metadata.index.summary_en` in the skill's `SKILL.md` frontmatter.
+1. Set `metadata.index.summary_zh` and `metadata.index.summary_en` in the skill's `SKILL.md` frontmatter. Set `metadata.index.visibility: internal` for an internal skill-development capability.
 2. Run `ruby scripts/update-skill-index.rb` to regenerate both README tables.
 3. Run `ruby scripts/update-skill-index.rb --check` before committing.
 
-The script derives the name, category, relative link, and invocation mode from each existing skill. Never edit content between the `current-skill-index` markers by hand. Keep both summaries concise and useful for someone choosing a skill; the index will then grow automatically with the collection.
+The script derives the name, category, relative link, and invocation mode from each public skill. Never edit content between the `current-skill-index` markers by hand. Keep both summaries concise and useful for someone choosing a skill; the index will then grow automatically with the collection.

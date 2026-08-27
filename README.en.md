@@ -29,7 +29,6 @@ Choose the skill that fits your current learning need.
 | --- | --- | --- | --- |
 | `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
 | `flow` | [`k12-export`](./skills/flow/k12-export/SKILL.md) | Exports the current learning materials to chat or PDF using each source skill's template. | User or agent invocation |
-| `flow` | [`k12-export-enable`](./skills/flow/k12-export-enable/SKILL.md) | Adds a source declaration and export template so an existing skill works with `k12-export`. | User or agent invocation |
 | `practice` | [`k12-listening-main-idea-practice`](./skills/practice/k12-listening-main-idea-practice/SKILL.md) | A daily 10–15 minute self-practice for grasping the main idea in listening. | User or agent invocation |
 | `practice` | [`k12-writing-synonym-matching-chinese`](./skills/practice/k12-writing-synonym-matching-chinese/SKILL.md) | Chinese synonym and near-synonym idiom practice through three-to-three matching. | User or agent invocation |
 | `tutoring` | [`k12-writing-language-revision-chinese`](./skills/tutoring/k12-writing-language-revision-chinese/SKILL.md) | Chinese revision practice for information, pacing, and expression, with a model text. | User or agent invocation |

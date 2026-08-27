@@ -3,6 +3,7 @@ name: k12-export-enable
 description: 为已有 K12 skill 添加 `k12-export` 支持：声明导出来源名称，并创建固定的导出模板。用于用户要求某个 skill 的会话材料可被结构化导出时。
 metadata:
   index:
+    visibility: internal
     summary_zh: 为已有 skill 添加可由 `k12-export` 使用的来源声明和导出模板。
     summary_en: Adds a source declaration and export template so an existing skill works with `k12-export`.
 ---
