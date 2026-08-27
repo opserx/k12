@@ -1,8 +1,8 @@
 # Contributing
 
-Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project conventions](./skills/flow/ask-qq/references/project-conventions.md) for the current categories and data dictionary.
+Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project conventions](./skills/flow/k12-ask-qq/references/project-conventions.md) for the current categories and data dictionary.
 
-- Use lowercase kebab-case names and follow the `aspect-purpose[-subject]` convention in the project conventions.
+- Use lowercase kebab-case names and follow the `k12-aspect-purpose[-subject]` convention in the project conventions.
 - Include YAML frontmatter with `name` and a focused `description`.
 - Keep the entrypoint short and tool-neutral. Put only durable, task-specific guidance in it.
 - Add scripts, references, or assets only when the skill truly needs them.

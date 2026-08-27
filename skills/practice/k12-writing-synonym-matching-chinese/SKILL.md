@@ -1,5 +1,5 @@
 ---
-name: writing-synonym-matching-chinese
+name: k12-writing-synonym-matching-chinese
 description: 为初中生开展中文近义词和近义成语辨析练习：每题以三对三填空匹配检验词义、搭配、语体和情境差别，并记录已练词以避免无意重复。
 metadata:
   index:
@@ -65,4 +65,3 @@ metadata:
 4. 学生可以一次回答多题，也可以分次回答。每题的答案均须按句号顺序写全，例如“第一组：a,c,b；第二组：c,a,b”。全部答完后统一讲解；如果只答了部分，就先讲已答的题，再提醒剩余题目。
 
 如果学生没有按句号顺序写出完整的候选词字母，提醒其按题面格式补全，不公布答案。
-

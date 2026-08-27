@@ -1,5 +1,5 @@
 ---
-name: writing-prompted-practice-chinese
+name: k12-writing-prompted-practice-chinese
 description: 为初中生开展中文命题片段写作训练：布置写人、写事、写物或写景题目，在学生提交初稿后提供修改稿和最佳例文。只进行片段练习，不写整篇作文。
 metadata:
   index:
@@ -73,4 +73,3 @@ metadata:
 6. 不必以学生的初稿为基础，可以重新选择具体内容、观察角度、描写重点和表达方式。
 
 依次提供“修改稿”和“最佳例文”，使学生能够比较初稿、修改稿与最佳例文在内容和语言上的差异。
-

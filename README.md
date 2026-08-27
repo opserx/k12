@@ -1,56 +1,42 @@
 # 圈圈的课外辅导 Skills
 
-[English](./README.en.md) · [项目组织规范](./skills/flow/ask-qq/references/project-organization.md) · [贡献指南](./CONTRIBUTING.md) · [MIT License](./LICENSE)
+[English](./README.en.md) · [GitHub](https://github.com/opserx/k12) · [MIT License](./LICENSE)
 
-这是为我刚上初中的儿子 **圈圈** 做的一套课外辅导 Agent Skills。它们把辅导中反复出现的做法写成小而独立、可以组合的指令：先弄清孩子的问题，再选择合适的学习活动，最后根据实际反馈调整。
-
-每个 skill 都是普通文件，不绑定 Claude Code、ChatGPT、Codex 或任何特定模型。只要一个 Agent 支持读取以 `SKILL.md` 为入口、带 YAML frontmatter 的技能目录，就可以使用它。
+这是为初中阶段课外辅导准备的一组 Skills。选择下方需要的 skill 安装后，直接在 Agent 中调用即可。
 
 ## 安装
 
-### 从 Git 仓库安装
-
-当仓库发布到 GitHub 后，可使用兼容 [skills.sh](https://skills.sh) 的安装器，把所需的 skill 复制到你的项目中：
+使用 [skills.sh](https://skills.sh) 安装：
 
 ```bash
-npx skills@latest add <GitHub-用户名>/<仓库名>
+npx skills@latest add opserx/k12
 ```
 
-安装器会让你选择 skill 以及目标 Agent。它复制的是可编辑文件；更新时由你主动执行：
+按提示选择要安装的 skill 和目标 Agent。之后可用以下命令更新已安装的 skills：
 
 ```bash
 npx skills@latest update
 ```
 
-### 任意 Agent 的手动安装
-
-复制一个或多个 `skills/<主题>/<skill-name>/` 目录到你的 Agent 配置的 skills 目录，并确保 Agent 会发现 `SKILL.md`。不需要插件、账号、遥测或运行时依赖。
+也可以把所需的 skill 目录复制到 Agent 的 skills 目录中。
 
 ## 当前技能索引
 
-这是当前可用 skills 的名称和简要说明，由各 skill 的索引元数据自动生成。
+从这里选择适合当前学习需要的 skill。
 
 <!-- current-skill-index:start -->
 | 分类 | Skill | 用途 | 调用方式 |
 | --- | --- | --- | --- |
-| `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
-| `flow` | [`writing-session-export-chinese`](./skills/flow/writing-session-export-chinese/SKILL.md) | 将本次中文写作练习整理为可打印、可讲解的材料稿。 | 可由用户或 Agent 调用 |
-| `practice` | [`listening-main-idea-practice`](./skills/practice/listening-main-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习。 | 可由用户或 Agent 调用 |
-| `practice` | [`writing-synonym-matching-chinese`](./skills/practice/writing-synonym-matching-chinese/SKILL.md) | 中文近义词和近义成语的三对三填空辨析练习。 | 可由用户或 Agent 调用 |
-| `tutoring` | [`writing-language-revision-chinese`](./skills/tutoring/writing-language-revision-chinese/SKILL.md) | 中文病文修改：辨析信息、节奏和修饰问题，再比较最佳例文。 | 可由用户或 Agent 调用 |
-| `tutoring` | [`writing-prompted-practice-chinese`](./skills/tutoring/writing-prompted-practice-chinese/SKILL.md) | 中文命题片段写作：从出题、初稿到修改稿和最佳例文。 | 可由用户或 Agent 调用 |
+| `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
+| `flow` | [`k12-export`](./skills/flow/k12-export/SKILL.md) | 将本次学习材料整理为可打印、可直接使用的材料稿。 | 可由用户或 Agent 调用 |
+| `practice` | [`k12-listening-main-idea-practice`](./skills/practice/k12-listening-main-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习。 | 可由用户或 Agent 调用 |
+| `practice` | [`k12-writing-synonym-matching-chinese`](./skills/practice/k12-writing-synonym-matching-chinese/SKILL.md) | 中文近义词和近义成语的三对三填空辨析练习。 | 可由用户或 Agent 调用 |
+| `tutoring` | [`k12-writing-language-revision-chinese`](./skills/tutoring/k12-writing-language-revision-chinese/SKILL.md) | 中文病文修改：辨析信息、节奏和修饰问题，再比较最佳例文。 | 可由用户或 Agent 调用 |
+| `tutoring` | [`k12-writing-prompted-practice-chinese`](./skills/tutoring/k12-writing-prompted-practice-chinese/SKILL.md) | 中文命题片段写作：从出题、初稿到修改稿和最佳例文。 | 可由用户或 Agent 调用 |
 <!-- current-skill-index:end -->
-
-## 项目组织
-
-全局设计和规范文档统一随 [`ask-qq`](./skills/flow/ask-qq/SKILL.md) 分发，位于其 [`references/`](./skills/flow/ask-qq/references/project-organization.md) 中。当前只有目录说明；其他设计和规范将在达成具体约定后逐步补充。`ask-qq` 会读取这些文档，作为解释集合和推荐流程的依据。
 
 ## 全局参考资料
 
 | 文件 | 内容 |
 | --- | --- |
-| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | 三类 skill 目录的职责、技能命名规范，以及全局参考资料的存放规范。 |
-
-## 参考
-
-本项目借鉴了 [mattpocock/skills](https://github.com/mattpocock/skills) 的思想：用可组合的技能目录、`SKILL.md` 入口和 `skills` 安装器分发；这里不包含其插件清单或任何 Claude Code/ChatGPT 专属约束。
+| [`project-conventions.md`](./skills/flow/k12-ask-qq/references/project-conventions.md) | Skills 的分类、命名规则，以及 `namespace`、`aspect`、`subject`、`category` 数据字典。 |

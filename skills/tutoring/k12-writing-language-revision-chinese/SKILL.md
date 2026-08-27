@@ -1,5 +1,5 @@
 ---
-name: writing-language-revision-chinese
+name: k12-writing-language-revision-chinese
 description: 为初中生开展中文语言提升练习：提供包含信息、节奏和修饰问题的错误片段，学生修改后进行具体点评并展示最佳例文。只进行片段练习，不写整篇作文。
 metadata:
   index:
@@ -149,4 +149,3 @@ metadata:
 - 修饰问题：用词、句式、描写、修辞、衔接和过渡是否准确、自然、流畅、生动。
 
 每次练习结束时都要说明这三类问题的基本定义，不能因为之前已经介绍过而省略。
-

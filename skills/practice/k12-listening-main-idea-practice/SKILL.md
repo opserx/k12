@@ -1,5 +1,5 @@
 ---
-name: listening-main-idea-practice
+name: k12-listening-main-idea-practice
 description: 开展每天 10–15 分钟的听力中心理解自我练习。适用于学生需要从短音频中抓住中心、区分主次、过滤干扰或延迟复述要点时。
 metadata:
   index:

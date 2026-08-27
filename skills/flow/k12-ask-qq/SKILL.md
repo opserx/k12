@@ -1,5 +1,5 @@
 ---
-name: ask-qq
+name: k12-ask-qq
 description: Explain QQ's tutoring-skill collection and suggest the right next skill or a simple next step for a middle-school learning question. Use when someone asks what these skills do or where to begin.
 disable-model-invocation: true
 metadata:

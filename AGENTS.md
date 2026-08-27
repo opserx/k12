@@ -3,13 +3,13 @@
 ## Document roles and authority
 
 - `AGENTS.md` is for AI agents working in this repository. It defines the repository-maintenance instructions in this file.
-- [`skills/flow/ask-qq/references/`](skills/flow/ask-qq/references/) contains the authoritative project design and convention documents. When a project-design or convention question arises, read the relevant reference and follow it.
+- [`skills/flow/k12-ask-qq/references/`](skills/flow/k12-ask-qq/references/) contains the authoritative project design and convention documents. When a project-design or convention question arises, read the relevant reference and follow it.
 - `README.md` and `README.en.md` are user-facing documents. They explain the collection, installation, and the currently available skills; they are not the source of project-design rules.
 
 ## Read first
 
-- The global project conventions are in [project-conventions.md](skills/flow/ask-qq/references/project-conventions.md).
-- Follow its `aspect-purpose[-subject]` naming convention for ordinary skills. `ask-qq` is the explicit global-router exception.
+- The global project conventions are in [project-conventions.md](skills/flow/k12-ask-qq/references/project-conventions.md).
+- Follow its `k12-aspect-purpose[-subject]` naming convention for ordinary skills. `k12-ask-qq` is the explicit global-router exception.
 
 ## Current skill index
 
