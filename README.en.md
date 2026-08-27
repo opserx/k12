@@ -26,7 +26,9 @@ npx skills@latest update
 
 Copy one or more `skills/<topic>/<skill-name>/` directories into the skills location configured by your agent, and make sure it discovers `SKILL.md`. No plugin, account, telemetry, or runtime dependency is required.
 
-## Current skills
+## Current skill index
+
+This is the name-and-summary index of currently available skills. When a skill is added, removed, or renamed, update this table and its Chinese counterpart in the same change.
 
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |

@@ -26,7 +26,9 @@ npx skills@latest update
 
 复制一个或多个 `skills/<主题>/<skill-name>/` 目录到你的 Agent 配置的 skills 目录，并确保 Agent 会发现 `SKILL.md`。不需要插件、账号、遥测或运行时依赖。
 
-## 当前 Skills
+## 当前技能索引
+
+这是当前可用 skills 的名称和简要说明。新增、删除或重命名 skill 时，必须同步更新此表和英文 README 中的对应表。
 
 | 分类 | Skill | 用途 | 调用方式 |
 | --- | --- | --- | --- |
