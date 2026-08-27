@@ -12,7 +12,7 @@ metadata:
 
 You do not need to remember this collection. Ask here first.
 
-This is a small, portable collection for QQ's after-school tutoring. Before explaining the collection or recommending a flow, read [the project organization](references/project-organization.md).
+This is a small, portable collection for QQ's after-school tutoring. Before explaining the collection or recommending a flow, read [the project conventions](references/project-conventions.md).
 
 Use the documented directory structure as the source of truth. Do not claim that a blank starter skill already contains a method.
 

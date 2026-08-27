@@ -1,6 +1,6 @@
-# 项目组织规范
+# 项目规范
 
-`skills/flow/ask-qq/references/` 是本项目全局设计与规范文档的统一位置，会随 `ask-qq` 一起安装。当前只记录目录组织；随着项目发展，再按需补充已经达成共识的说明。
+`skills/flow/ask-qq/references/` 是本项目全局设计与规范文档的统一位置，会随 `ask-qq` 一起安装。本文记录已经达成共识的目录组织、命名与数据定义；随着项目发展，再按需补充具体约定。
 
 ```text
 skills/
@@ -20,18 +20,27 @@ skills/
 普通 skill 的名称使用：
 
 ```text
-<领域>-<技能目的>[-<学科>]
+<方面>-<技能目的>[-<学科>]
 ```
 
-- **领域**：学习活动的主要领域，例如 `reading`、`writing`、`practice` 或 `tutoring`。
+- **方面**：训练主要锻炼的听、说、读、写中的某一方面；在英文命名和字段中统一使用 `aspect`，例如 `listening`、`speaking`、`reading`、`writing`。
 - **技能目的**：这个 skill 具体要帮助完成的动作或达到的结果，例如 `prompted-practice`、`language-revision`、`synonym-matching`、`lesson-planning`。
-- **学科**：适用范围受某一学科限制时加在最后，例如 `chinese`、`english`、`math`。领域本身已包含学科，或 skill 跨学科时省略。
+- **学科**：适用范围受某一学科限制时加在最后，例如 `chinese`、`english`、`math`。方面本身已包含学科，或 skill 跨学科时省略。
 
-目录分类与名称的领域是两个维度：分类决定文件放在 `flow`、`tutoring` 还是 `practice`；名称让安装后扁平展示的 skill 仍然可识别。
+目录分类与名称的方面是两个维度：分类决定文件放在 `flow`、`tutoring` 还是 `practice`；方面说明它训练什么。名称让安装后扁平展示的 skill 仍然可识别。
 
 `ask-qq` 是唯一例外：它是面向用户的全局路由名称，不使用这一格式。
 
-### 当前名称
+## 数据字典
+
+| 中文字段 | 英文字段 | 定义 | 示例或规则 |
+| --- | --- | --- | --- |
+| 方面 | `aspect` | 这项技能主要锻炼的听、说、读、写中的一个方面。它用于名称的第一段，描述训练对象，不描述使用方式。 | `listening`、`speaking`、`reading`、`writing`。不要使用 `practice`、`tutoring` 或 `flow`，它们是分类。 |
+| 技能目的 | `purpose` | 技能希望完成的具体动作或结果。它用于名称的第二段。 | `main-idea-practice`、`prompted-practice`、`language-revision`。 |
+| 学科 | `subject` | 技能内容所限定的学科。它是可选的名称最后一段。 | `chinese`、`english`、`math`。方面本身已含学科，或技能不区分／跨越学科时省略。 |
+| 技能分类 | `category` | 技能在仓库中的目录分类，表示协作或使用方式，不表示训练的方面。 | `flow`、`tutoring`、`practice`，分别对应流程路由、有人参与的辅导、学习者自我练习。 |
+
+### 命名示例
 
 | 用途 | 分类 | 名称 |
 | --- | --- | --- |

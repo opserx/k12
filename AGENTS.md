@@ -8,8 +8,8 @@
 
 ## Read first
 
-- The global project conventions are in [project-organization.md](skills/flow/ask-qq/references/project-organization.md).
-- Follow its `domain-purpose[-subject]` naming convention for ordinary skills. `ask-qq` is the explicit global-router exception.
+- The global project conventions are in [project-conventions.md](skills/flow/ask-qq/references/project-conventions.md).
+- Follow its `aspect-purpose[-subject]` naming convention for ordinary skills. `ask-qq` is the explicit global-router exception.
 
 ## Current skill index
 
