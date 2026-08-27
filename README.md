@@ -34,9 +34,9 @@ npx skills@latest update
 | `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | 空白起步 skill：以后用于复盘自我练习与错题。 | 可由用户或 Agent 调用 |
 
-## 设计与规范
+## 项目组织
 
-项目介绍、三类技能的职责、目录约定和 `SKILL.md` 编写规范统一维护在 [docs/](./docs/README.md)。`ask-qq` 会按问题需要读取这些文档，作为解释集合和推荐流程的依据。
+当前已确定的目录说明维护在 [docs/](./docs/README.md)。其他设计和规范将在达成具体约定后逐步补充；`ask-qq` 会读取现有说明，作为解释集合和推荐流程的依据。
 
 ## 参考
 

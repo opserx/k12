@@ -8,12 +8,9 @@ disable-model-invocation: true
 
 You do not need to remember this collection. Ask here first.
 
-This is a small, portable collection for QQ's after-school tutoring. Read the relevant project documentation before explaining the collection or recommending a flow:
+This is a small, portable collection for QQ's after-school tutoring. Before explaining the collection or recommending a flow, read [the project organization](../../../docs/README.md).
 
-- For the collection's purpose, category responsibilities, and boundaries, read [the design](../../../docs/design.md).
-- For the directory layout and rules for writing or changing a skill, read [the skill conventions](../../../docs/skill-conventions.md).
-
-Use the documents as the source of truth. Do not claim that a blank starter skill already contains a method.
+Use the documented directory structure as the source of truth. Do not claim that a blank starter skill already contains a method.
 
 First identify the immediate need in plain language. Recommend the one matching skill, or say that the collection has no suitable skill yet.
 

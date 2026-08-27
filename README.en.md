@@ -34,9 +34,9 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 | `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | Blank starter skill for reviewing self-practice and mistakes. | User or agent invocation |
 
-## Design and conventions
+## Project organization
 
-The project introduction, category responsibilities, directory layout, and `SKILL.md` writing conventions are maintained in [docs/](./docs/README.md). `ask-qq` reads the relevant document when it explains the collection or recommends a flow.
+The currently agreed directory layout is maintained in [docs/](./docs/README.md). Other design and convention documents will be added as decisions are made; `ask-qq` reads the available documentation when it explains the collection or recommends a flow.
 
 ## Inspiration
 
