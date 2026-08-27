@@ -15,6 +15,40 @@ skills/
 
 每个 skill 都放在 `skills/<category>/<skill-name>/`，并以目录内的 `SKILL.md` 作为入口。分类用于发现和维护，不改变 skill 名称，也不要求 Agent 运行时支持分类。
 
+## 技能命名规范
+
+普通 skill 的名称使用：
+
+```text
+<领域>-<技能目的>[-<学科>]
+```
+
+- **领域**：学习活动的主要领域，例如 `reading`、`writing`、`practice` 或 `tutoring`。
+- **技能目的**：这个 skill 具体要帮助完成的动作或达到的结果，例如 `prompted-practice`、`language-revision`、`synonym-matching`、`lesson-planning`。
+- **学科**：适用范围受某一学科限制时加在最后，例如 `chinese`、`english`、`math`。领域本身已包含学科，或 skill 跨学科时省略。
+
+目录分类与名称的领域是两个维度：分类决定文件放在 `flow`、`tutoring` 还是 `practice`；名称让安装后扁平展示的 skill 仍然可识别。
+
+`ask-qq` 是唯一例外：它是面向用户的全局路由名称，不使用这一格式。
+
+### 当前名称
+
+| 用途 | 分类 | 名称 |
+| --- | --- | --- |
+| 设计一节不区分学科的辅导课 | `tutoring` | `tutoring-lesson-planning` |
+| 复盘不区分学科的自我练习 | `practice` | `practice-review` |
+
+### 中文写作技能拆分命名
+
+LuneTree 当前的 `chinese-writing-practice` 包含四个流程；迁入本项目时，拆为以下四个独立 skill，而不保留父 skill：
+
+| 原流程 | 分类 | 名称 |
+| --- | --- | --- |
+| 命题写作 | `tutoring` | `writing-prompted-practice-chinese` |
+| 语言提升 | `tutoring` | `writing-language-revision-chinese` |
+| 近义词练习 | `practice` | `writing-synonym-matching-chinese` |
+| 导出材料 | `flow` | `writing-session-export-chinese` |
+
 ## `references/` 目录规范
 
 `ask-qq/references/` 保存本项目的全局设计、规范与长期约定；`ask-qq` 是读取和解释这些资料的统一入口。

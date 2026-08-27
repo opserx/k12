@@ -31,7 +31,7 @@ npx skills@latest update
 | 分类 | Skill | 用途 | 调用方式 |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
-| `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
+| `tutoring` | [`tutoring-lesson-planning`](./skills/tutoring/tutoring-lesson-planning/SKILL.md) | 空白起步 skill：以后用于设计一次辅导课。 | 可由用户或 Agent 调用 |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | 空白起步 skill：以后用于复盘自我练习与错题。 | 可由用户或 Agent 调用 |
 
 ## 项目组织
@@ -42,7 +42,7 @@ npx skills@latest update
 
 | 文件 | 内容 |
 | --- | --- |
-| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | 三类 skill 目录的职责，以及全局参考资料的存放规范。 |
+| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | 三类 skill 目录的职责、技能命名规范，以及全局参考资料的存放规范。 |
 
 ## 参考
 

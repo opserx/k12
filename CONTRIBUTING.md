@@ -2,7 +2,7 @@
 
 Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project organization document](./skills/flow/ask-qq/references/project-organization.md) for the current categories.
 
-- Use lowercase kebab-case names.
+- Use lowercase kebab-case names and follow the `domain-purpose[-subject]` convention in the project organization document.
 - Include YAML frontmatter with `name` and a focused `description`.
 - Keep the entrypoint short and tool-neutral. Put only durable, task-specific guidance in it.
 - Add scripts, references, or assets only when the skill truly needs them.

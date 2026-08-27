@@ -31,7 +31,7 @@ Copy one or more `skills/<topic>/<skill-name>/` directories into the skills loca
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |
 | `flow` | [`ask-qq`](./skills/flow/ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
-| `tutoring` | [`lesson-planner`](./skills/tutoring/lesson-planner/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
+| `tutoring` | [`tutoring-lesson-planning`](./skills/tutoring/tutoring-lesson-planning/SKILL.md) | Blank starter skill for planning a tutoring session. | User or agent invocation |
 | `practice` | [`practice-review`](./skills/practice/practice-review/SKILL.md) | Blank starter skill for reviewing self-practice and mistakes. | User or agent invocation |
 
 ## Project organization
@@ -42,7 +42,7 @@ Global design and convention documents are distributed with [`ask-qq`](./skills/
 
 | File | Contents |
 | --- | --- |
-| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | Responsibilities of the three skill directories and the convention for global reference material. |
+| [`project-organization.md`](./skills/flow/ask-qq/references/project-organization.md) | Responsibilities of the three skill directories, the skill naming convention, and the convention for global reference material. |
 
 ## Inspiration
 
