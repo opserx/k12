@@ -13,7 +13,7 @@
 
 ## Internal skill-development capabilities
 
-- [`k12-export-enable`](skills/flow/k12-export-enable/SKILL.md) is an internal skill-development capability, not a user-facing learning skill. Use it only when adding `k12-export` support to an existing skill.
+- [`k12-export-enable`](skills/flow/k12-export-enable/SKILL.md) is an internal skill-development capability, not a user-facing learning skill. Use it only when adding or changing an existing skill's internal export instructions and template.
 - Mark internal skills with `metadata.index.visibility: internal`. They must remain out of the README skill indexes, even though agents working in this repository may use them.
 - [`k12-ask-qq`](skills/flow/k12-ask-qq/SKILL.md) knows that `k12-export-enable` exists. It may route an internal skill-development request to it, but must not list or recommend it as a skill for users to invoke.
 

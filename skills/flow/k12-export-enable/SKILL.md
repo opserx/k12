@@ -1,25 +1,41 @@
 ---
 name: k12-export-enable
-description: 为已有 K12 skill 添加 `k12-export` 支持：声明导出来源名称，并创建固定的导出模板。用于用户要求某个 skill 的会话材料可被结构化导出时。
+description: 为已有 K12 skill 添加其自身的导出指令和固定导出模板。用于用户要求某个 skill 的会话材料可被结构化导出时。
 metadata:
   index:
     visibility: internal
-    summary_zh: 为已有 skill 添加可由 `k12-export` 使用的来源声明和导出模板。
-    summary_en: Adds a source declaration and export template so an existing skill works with `k12-export`.
+    summary_zh: 为已有 skill 添加内部导出指令和固定导出模板。
+    summary_en: Adds internal export instructions and a fixed export template to an existing skill.
 ---
 
 # Enable K12 Export
 
-为一个已有 skill 添加导出支持，不改变它原有的学习或辅导流程。
+为一个已有 skill 添加其自身的导出支持，不改变它原有的学习或辅导流程。`k12-export-enable` 是内部的 skill 开发工具，不面向学习者。
+
+## 导出协议
+
+本项目不提供名为 `k12-export` 的独立 skill。每个支持导出的 skill 在自己的 `SKILL.md` 中执行导出；`k12-export-enable` 负责让该 skill 遵循以下协议。
+
+一个可导出 skill 必须：
+
+- 在其目录中提供固定文件 `references/export-template.md`；
+- 在其 `SKILL.md` 中提供 `## 导出` 小节，并链接该模板；
+- 在该小节声明导出来源名称，且它与 frontmatter 的 `name` 完全一致；
+- 只在用户明确要求导出、生成打印稿或整理本次学习材料时读取模板并导出。
+
+模板只定义结构，使用 Markdown，并包含总标题、“来源技能”章节和一个或多个内容章节。每个内容章节写出标题、简短说明和应放入的实际会话内容。没有对应材料的章节在导出时省略；不要补造材料。
+
+导出小节还必须规定以下运行时行为：
+
+- **chat** 是默认方式：在当前会话的一条新回复中输出完整、可独立阅读的导出内容，不创建文件；用户可通过客户端导出该回复。
+- **pdf** 仅在用户明确要求 PDF 时使用：用同一份内容生成实际 PDF 并提供文件；如果当前环境不能生成 PDF，要明确说明，不能把不完整的 chat 内容当作 PDF。
+- 只整理当前会话中由该 skill 实际产生的材料，保留学生原文、题目、作答、反馈和版本之间的区别；无法取得的附件、图片或非文本材料要列出。
 
 ## 改造步骤
 
 1. 读取目标 `SKILL.md` 的 frontmatter，取得其 `name`；这就是唯一的导出来源名称，不要另起别名。
 2. 在目标 skill 创建固定文件 `references/export-template.md`。
-3. 在目标 `SKILL.md` 添加 `## 导出` 小节，明确写出：
-   - 它支持 `k12-export`；
-   - 导出来源名称为该 skill 的 `name`；
-   - 仅在用户要求导出时读取 `references/export-template.md`。
+3. 在目标 `SKILL.md` 添加可独立执行的 `## 导出` 小节，明确写出导出来源名称、模板链接、用户请求触发条件、默认 chat 导出和显式 PDF 导出，以及本协议要求的材料边界。
 4. 不改动原有练习、辅导或流程规则，除非为补足导出所需的材料角色而确有必要。
 
 ## 模板要求
@@ -45,4 +61,4 @@ metadata:
 
 - `references/export-template.md` 存在且包含总标题、来源技能、章节标题、说明和内容。
 - 模板中的来源名称与 `SKILL.md` frontmatter 的 `name` 完全一致。
-- `SKILL.md` 的 `## 导出` 小节链接该模板。
+- `SKILL.md` 的 `## 导出` 小节链接该模板，并且本身足以执行 chat 和 PDF 导出。

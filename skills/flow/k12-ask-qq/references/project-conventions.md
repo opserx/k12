@@ -30,7 +30,7 @@ k12-<方面>-<技能目的>[-<学科>]
 
 目录分类与名称的方面是两个维度：分类决定文件放在 `flow`、`tutoring` 还是 `practice`；方面说明它训练什么。名称让安装后扁平展示的 skill 仍然可识别。
 
-流程基础设施 skill 可以使用 `k12-<流程>[-<动作>]`：当前为 `k12-ask-qq`、`k12-export` 与 `k12-export-enable`。它们不使用方面、目的和学科段，但仍必须保留 `k12-` 前缀。
+流程基础设施 skill 可以使用 `k12-<流程>[-<动作>]`：当前为 `k12-ask-qq` 与 `k12-export-enable`。它们不使用方面、目的和学科段，但仍必须保留 `k12-` 前缀。
 
 ## 数据字典
 
@@ -57,8 +57,7 @@ LuneTree 的 `chinese-writing-practice` 已拆为以下四个独立 skill，不�
 | 命题写作 | `tutoring` | `k12-writing-prompted-practice-chinese` |
 | 语言提升 | `tutoring` | `k12-writing-language-revision-chinese` |
 | 近义词练习 | `practice` | `k12-writing-synonym-matching-chinese` |
-| 导出材料 | `flow` | `k12-export` |
-| 为已有 skill 启用导出 | `flow` | `k12-export-enable` |
+| 为已有 skill 启用内部导出 | `flow`（内部） | `k12-export-enable` |
 
 ## `references/` 目录规范
 
@@ -69,3 +68,7 @@ LuneTree 的 `chinese-writing-practice` 已拆为以下四个独立 skill，不�
 - `k12-ask-qq/SKILL.md` 必须链接资料，并说明什么情形下应读取它；不要默认加载与当前问题无关的资料。
 - 资料只记录会改变项目级判断的具体事实、约定或流程。
 - 单独安装 `k12-ask-qq` 时，这些全局资料会一同安装；单独安装其他 skill 时不能假定这些资料也存在。此类 skill 必须保持自身可用，或携带自己的必要参考资料。
+
+## 导出支持
+
+`k12-export-enable` 是为 skill 开发服务的内部能力。它持有导出模板与运行规则的约定，并负责将可独立执行的 `## 导出` 指令加入需要导出的 skill。没有独立的 `k12-export` skill；导出时由当前学习 skill 自己读取其 `references/export-template.md` 并执行。
