@@ -12,6 +12,10 @@ metadata:
 
 You do not need to remember this collection. Ask here first.
 
+## 输出语言
+
+除非当前任务特别针对英语学习，所有面向用户的说明、提问、反馈、示例和导出内容尽量使用中文；需要保留原文的学习材料除外。
+
 This is a small, portable collection for QQ's after-school tutoring. Before explaining the collection or recommending a flow, read [the project conventions](references/project-conventions.md).
 
 Use the documented directory structure as the source of truth. Do not claim that a blank starter skill already contains a method.

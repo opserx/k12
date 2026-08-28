@@ -11,6 +11,10 @@ metadata:
 
 每天练习 10–15 分钟。目标是先抓住“最重要的是什么”，而不是记住尽可能多的细节。
 
+## 输出语言
+
+除非当前任务特别针对英语学习，所有面向用户的说明、提问、反馈、示例和导出内容尽量使用中文；需要保留原文的学习材料除外。
+
 使用 1–2 分钟的中文口语音频，例如新闻或课文录音。阅读文本不能替代听力；本 skill 由当前 Agent 生成并播报训练片段，不要求学生先准备录音。
 
 ## 内部语音生成与播放
@@ -19,13 +23,23 @@ metadata:
 
 ### Grok
 
-当前会话同时提供 `voice_list_voices` 和 `voice_generate_speech` 时，将其识别为可用的 Grok 语音环境；`voice_generate_multi_speech` 是可选的多片段工具。
+当前会话同时提供 `voice_list_voices` 与 `voice_generate_speech` 时，将其识别为可用的 Grok 语音环境，不再每次列举或筛选声音。`voice_generate_multi_speech` 是可选的多片段工具。
 
-1. 调用 `voice_list_voices`，完全按当前 schema 读取声音目录。
-2. 只选择目录明确表明可说中文、且为温柔女声的声音。若不能同时确认中文、女性和温柔，不要凭声音名称猜测，应报告不能生成。
-3. 依照选定子练习准备未向学生展示的中文训练文本，按自然语义切成短片段。只有多个独立片段且 `voice_generate_multi_speech` 确实存在时才使用它；否则逐段调用 `voice_generate_speech`。
-4. 只按工具实时提供的 schema 传参；若可表达风格，要求“中文、自然偏慢、温柔平静的女声”。不能把 xAI REST API 的字段臆造为这三个会话工具的参数。
-5. 每段生成后，用宿主返回的音频结果立即播放或呈现给学生；在播放前不显示对应原文。若能生成但当前界面不能播放或呈现音频，也报告不能进行本次练习。
+默认固定使用：
+
+- 工具：`voice_generate_speech`
+- voice：`luna`
+- language：`zh`
+- dest_path：以 `.mp3` 结尾的工作区路径
+- 不传 `with_timestamps`
+
+`luna` 的依据已经核对，练习时不再重查：会话声音目录中其为 female、multilingual；xAI 官方描述为 gentle、patient、deeply nurturing，用途为 Education / Assistant；官方样例含中文。备选同为女性多语种柔和声的是 `carina`、`liora`、`aurora`，本练习默认仍用 `luna`，不要使用偏活泼的 `eve`。
+
+只按这三个会话工具的实时 schema 传参。会话工具没有独立的风格、语速或 instructions 字段；需要略慢、略柔时，把 `<slow>`、`<soft>`、`[pause]` 写进 text。不得把 xAI 公共 REST API 的字段名臆造为会话工具参数；会话字段是 voice，不是 voice_id。
+
+依照选定子练习准备未向学生展示的中文训练文本，按自然语义切成短片段。仅当有多个独立片段且 `voice_generate_multi_speech` 确实存在时才使用它；否则逐段调用 `voice_generate_speech`。每段生成后，用宿主返回的 MP3 立即播放或呈现；播放前不显示对应原文。
+
+仅在下列情形停止并输出“当前 Agent 不能生成音频，无法进行这次听力练习。”：所需工具缺失、调用被拒绝或失败、无法把音频播放或呈现给学生。不要改成阅读理解，也不以文字模拟音频。
 
 ### ChatGPT／Codex 与 Claude Code
 

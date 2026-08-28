@@ -8,7 +8,7 @@
 
 | 当前 Agent / 可用能力 | 结论 | 本 skill 应做什么 |
 | --- | --- | --- |
-| Grok，且能调用 `voice_list_voices` 与 `voice_generate_speech` | 可以生成语音。`voice_generate_multi_speech` 是可选的多片段快捷能力。 | 先列出声音；只从返回结果中选可用于中文、且描述或试听最接近温柔女声的 voice。用中文文本生成短片段；有多个彼此独立的片段且该工具确实已提供时，使用 multi 工具。用宿主返回的音频结果播放；若宿主没有播放/呈现音频的能力，明确说明“已生成音频，但当前界面无法播放”。 |
+| Grok，且能调用 `voice_list_voices` 与 `voice_generate_speech` | 可以生成语音。`voice_generate_multi_speech` 是可选的多片段快捷能力。 | 固定以 `voice_generate_speech`、`voice: luna`、`language: zh` 和以 `.mp3` 结尾的工作区 `dest_path` 生成短片段；不传 `with_timestamps`，也不再每次列出或筛选声音。若宿主无法播放或呈现音频，按不能生成处理。 |
 | ChatGPT/Codex | ChatGPT 桌面端有供用户与 Agent 对话的 Voice UI；现有文档没有把它定义为 Codex skill 可调用的、可生成并播放任意音频片段的内建工具。 | 不要把 ChatGPT Voice 当作 TTS 工具，也不要私自调用 OpenAI API、索取/使用 API key 或用系统 `say` 代替。除非当前会话实际已暴露一个 TTS/播放工具及其 schema，否则输出“当前 Agent 不能生成音频，无法进行这次听力练习。” |
 | Claude Code | 内建 `/voice` 是把用户录音转写到输入框的**语音听写**，不是 Agent 的语音输出；其完整 built-in tool reference 也未列出 TTS/播放工具。 | 输出“当前 Agent 不能生成音频，无法进行这次听力练习。”；不得把 shell TTS 或另接 API 伪装成 Claude Code 原生能力。 |
 | 其他 Agent，或上述 Grok 工具缺失/调用被拒绝/生成失败 | 不能证明有可用的原生语音生成能力。 | 直接输出“当前 Agent 不能生成音频，无法进行这次听力练习。”不要改成阅读理解，也不要降级为文字模拟音频。 |
@@ -29,11 +29,10 @@
 
 ### 可执行规则
 
-1. 调用 `voice_list_voices`。没有结果、没有中文可用项，或工具拒绝调用，即停止并按“不能生成”报告。
-2. 在返回项中依据该工具实际提供的名称、性别/风格标签、样音或描述，选择明确符合“中文温柔女声”的项；若无法确认女性和温柔这两个条件，不要靠名字猜测，应报告无法生成所要求的声音。公开 xAI 文档只保证声音列表和 `zh` 语言参数，**没有保证某个固定 voice ID 必然是中文温柔女声**；不要硬编码 `eve` 等 ID。公开文档虽把 `luna` 描述为 gentle/patient/nurturing，但不声明其性别，故也不能把它断言为女声。
-3. 将训练材料切成自然、短的中文语义片段。一次练习需要多段独立音频时，仅在 `voice_generate_multi_speech` 已暴露时使用它；否则逐段调用 `voice_generate_speech`。有重复句子时必须保留原文一致性，不补写内容。
-4. 优先用当前宿主的音频返回/播放机制向学生播报。公开 xAI TTS 返回音频字节或流；Web 示例由调用方把结果交给 `Audio` 元素播放，所以生成与播放是两件要分别确认的事。
-5. 若 schema 可表达风格，再请求“中文、语速自然偏慢、语气温柔平静的女声”；若不可表达，只选择声音目录中最贴近的项，不伪造风格参数。
+1. 固定使用 `luna` 与 `language: zh`，不再每次调用 `voice_list_voices`。会话目录已标 `luna` 为女性，官方已标 gentle / patient / nurturing，本 skill 固定使用 `luna` + `language=zh`。备选为 `carina`、`liora`、`aurora`；不要使用偏活泼的 `eve`。
+2. 将训练材料切成自然、短的中文语义片段。一次练习需要多段独立音频时，仅在 `voice_generate_multi_speech` 已暴露时使用它；否则以 `voice_generate_speech` 逐段生成。传入 `.mp3` 结尾的工作区 `dest_path`，不传 `with_timestamps`；有重复句子时必须保留原文一致性，不补写内容。
+3. 会话工具没有独立的风格、语速或 instructions 字段。需要略慢、略柔时，把 `<slow>`、`<soft>`、`[pause]` 写进 text；不得编造这些字段，也不得把公开 REST API 的字段名作为会话参数。会话字段是 `voice`，不是 `voice_id`。
+4. 优先用当前宿主的 MP3 返回/播放机制向学生播报。公开 xAI TTS 返回音频字节或流；Web 示例由调用方把结果交给 `Audio` 元素播放，所以生成与播放是两件要分别确认的事。
 
 官方依据：[xAI Voice REST reference](https://docs.x.ai/developers/rest-api-reference/inference/voice)（`/v1/tts`、`zh`、声音列表和 WebSocket multi-utterance）、[xAI Text to Speech guide](https://docs.x.ai/developers/model-capabilities/audio/text-to-speech)（TTS 格式、播放示例与 15,000 字符限制）。
 
