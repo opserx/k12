@@ -28,3 +28,8 @@ When adding, removing, renaming, moving, or materially changing a skill:
 3. Run `ruby scripts/update-skill-index.rb --check` before committing.
 
 The script derives the name, category, relative link, and invocation mode from each public skill. Never edit content between the `current-skill-index` markers by hand. Keep both summaries concise and useful for someone choosing a skill; the index will then grow automatically with the collection.
+
+## Git 发布
+
+- 当用户说“发布技能”时，先检查工作区和远端 `main` 状态，然后将工作区中的全部改动（包括新增、删除和重命名）提交到本地 `main`，并推送到 `origin/main`。
+- 日常开发直接在 `main` 进行，不主动创建或切换功能分支；只有用户明确要求时才使用其他分支。
