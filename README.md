@@ -43,6 +43,7 @@ npx skills@latest update
 | --- | --- | --- | --- |
 | `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
 | `practice` | [`k12-listening-main-idea-practice`](./skills/practice/k12-listening-main-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习，可选择四项子练习。 | 可由用户或 Agent 调用 |
+| `practice` | [`k12-reading-close-reading-english`](./skills/practice/k12-reading-close-reading-english/SKILL.md) | 英语文章精读：识别图片或文本后，用对话提示理解，并按需整理生词表。 | 可由用户或 Agent 调用 |
 | `practice` | [`k12-writing-synonym-matching-chinese`](./skills/practice/k12-writing-synonym-matching-chinese/SKILL.md) | 中文近义词和近义成语的三对三填空辨析练习。 | 可由用户或 Agent 调用 |
 | `tutoring` | [`k12-writing-language-revision-chinese`](./skills/tutoring/k12-writing-language-revision-chinese/SKILL.md) | 中文病文修改：辨析信息、节奏和修饰问题，再比较最佳例文。 | 可由用户或 Agent 调用 |
 | `tutoring` | [`k12-writing-prompted-practice-chinese`](./skills/tutoring/k12-writing-prompted-practice-chinese/SKILL.md) | 中文命题片段写作：从出题、初稿到修改稿和最佳例文。 | 可由用户或 Agent 调用 |
