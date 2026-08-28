@@ -2,7 +2,7 @@
 
 ## 来源技能
 
-- **名称**：`k12-writing-synonym-matching-chinese`
+- **名称**：`k12-writing-word-chinese`
 
 ## 练习题
 

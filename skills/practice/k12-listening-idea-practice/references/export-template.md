@@ -2,7 +2,7 @@
 
 ## 来源技能
 
-- **名称**：`k12-listening-main-idea-practice`
+- **名称**：`k12-listening-idea-practice`
 
 ## 本次练习概览
 

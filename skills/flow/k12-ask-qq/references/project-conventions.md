@@ -46,15 +46,15 @@ k12-<方面>-<技能目的>[-<学科>]
 
 | 用途 | 分类 | 名称 |
 | --- | --- | --- |
-| 练习从听力材料中抓住中心 | `practice` | `k12-listening-main-idea-practice` |
+| 练习从听力材料中抓住中心 | `practice` | `k12-listening-idea-practice` |
 
 ### 中文写作技能
 
 | 分类 | 名称 |
 | --- | --- |
-| `tutoring` | `k12-writing-prompted-practice-chinese` |
-| `tutoring` | `k12-writing-language-revision-chinese` |
-| `practice` | `k12-writing-synonym-matching-chinese` |
+| `tutoring` | `k12-writing-short-chinese` |
+| `tutoring` | `k12-writing-rewrite-chinese` |
+| `practice` | `k12-writing-word-chinese` |
 | `flow`（内部） | `k12-export-enable` |
 
 ## `references/` 目录规范

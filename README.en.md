@@ -2,7 +2,7 @@
 
 [中文](./README.md) · [GitHub](https://github.com/opserx/k12) · [MIT License](./LICENSE)
 
-This is a collection of skills for middle-school after-school tutoring. Install the skill you need below, then invoke it directly in your agent.
+This is a collection of skills for middle-school after-school tutoring in mainland China. Install the skill you need below, then invoke it directly in your agent.
 
 ## Installation
 
@@ -42,11 +42,11 @@ Choose the skill that fits your current learning need.
 | Category | Skill | Purpose | Invocation |
 | --- | --- | --- | --- |
 | `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | Explains this collection and recommends a next step for the current tutoring situation. | Explicit user invocation |
-| `practice` | [`k12-listening-main-idea-practice`](./skills/practice/k12-listening-main-idea-practice/SKILL.md) | A daily 10–15 minute main-idea listening practice with four selectable sub-exercises. | User or agent invocation |
-| `practice` | [`k12-reading-close-reading-english`](./skills/practice/k12-reading-close-reading-english/SKILL.md) | English close reading from an image or text, with contextual dialogue and an on-demand vocabulary list. | User or agent invocation |
-| `practice` | [`k12-writing-synonym-matching-chinese`](./skills/practice/k12-writing-synonym-matching-chinese/SKILL.md) | Chinese synonym and near-synonym idiom practice through three-to-three matching. | User or agent invocation |
-| `tutoring` | [`k12-writing-language-revision-chinese`](./skills/tutoring/k12-writing-language-revision-chinese/SKILL.md) | Chinese revision practice for information, pacing, and expression, with a model text. | User or agent invocation |
-| `tutoring` | [`k12-writing-prompted-practice-chinese`](./skills/tutoring/k12-writing-prompted-practice-chinese/SKILL.md) | Chinese prompted fragment writing, from a prompt and draft to revision and model text. | User or agent invocation |
+| `practice` | [`k12-listening-idea-practice`](./skills/practice/k12-listening-idea-practice/SKILL.md) | A daily 10–15 minute main-idea listening practice with four selectable sub-exercises. | User or agent invocation |
+| `practice` | [`k12-reading-deepth-english`](./skills/practice/k12-reading-deepth-english/SKILL.md) | English close reading from an image or text, with contextual dialogue and an on-demand vocabulary list. | User or agent invocation |
+| `practice` | [`k12-writing-word-chinese`](./skills/practice/k12-writing-word-chinese/SKILL.md) | Chinese synonym and near-synonym idiom practice through three-to-three matching. | User or agent invocation |
+| `tutoring` | [`k12-writing-rewrite-chinese`](./skills/tutoring/k12-writing-rewrite-chinese/SKILL.md) | Chinese revision practice for information, pacing, and expression, with a model text. | User or agent invocation |
+| `tutoring` | [`k12-writing-short-chinese`](./skills/tutoring/k12-writing-short-chinese/SKILL.md) | Chinese prompted fragment writing, from a prompt and draft to revision and model text. | User or agent invocation |
 <!-- current-skill-index:end -->
 
 ## Global references

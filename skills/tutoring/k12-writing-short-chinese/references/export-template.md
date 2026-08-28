@@ -2,7 +2,7 @@
 
 ## 来源技能
 
-- **名称**：`k12-writing-prompted-practice-chinese`
+- **名称**：`k12-writing-short-chinese`
 
 ## 题目与内容提示
 

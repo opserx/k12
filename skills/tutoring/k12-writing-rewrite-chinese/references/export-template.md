@@ -2,7 +2,7 @@
 
 ## 来源技能
 
-- **名称**：`k12-writing-language-revision-chinese`
+- **名称**：`k12-writing-rewrite-chinese`
 
 ## 题目与错误片段
 
