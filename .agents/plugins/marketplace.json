@@ -1,7 +1,7 @@
 {
-  "name": "skills",
+  "name": "k12-skills",
   "interface": {
-    "displayName": "Skills"
+    "displayName": "K12 Skills"
   },
   "plugins": [
     {
