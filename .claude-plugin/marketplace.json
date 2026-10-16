@@ -1,0 +1,34 @@
+{
+  "name": "skills",
+  "owner": {
+    "name": "Skills Team"
+  },
+  "description": "Skills synced from Notion.",
+  "plugins": [
+    {
+      "name": "flow",
+      "source": "./plugins/flow",
+      "description": "Skills synced from Notion."
+    },
+    {
+      "name": "notion-skills-updater",
+      "source": "./plugins/notion-skills-updater",
+      "description": "Edit or create skills by updating their source in Notion (write-back via the Notion MCP)."
+    },
+    {
+      "name": "practice",
+      "source": "./plugins/practice",
+      "description": "Skills synced from Notion."
+    },
+    {
+      "name": "skills-ed33994a4c58",
+      "source": "./plugins/skills-ed33994a4c58",
+      "description": "Skills synced from Notion."
+    },
+    {
+      "name": "tutoring",
+      "source": "./plugins/tutoring",
+      "description": "Skills synced from Notion."
+    }
+  ]
+}

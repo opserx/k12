@@ -1,0 +1,68 @@
+{
+  "name": "skills",
+  "interface": {
+    "displayName": "Skills"
+  },
+  "plugins": [
+    {
+      "name": "flow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/flow"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "notion-skills-updater",
+      "source": {
+        "source": "local",
+        "path": "./plugins/notion-skills-updater"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "practice",
+      "source": {
+        "source": "local",
+        "path": "./plugins/practice"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "skills-ed33994a4c58",
+      "source": {
+        "source": "local",
+        "path": "./plugins/skills-ed33994a4c58"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "tutoring",
+      "source": {
+        "source": "local",
+        "path": "./plugins/tutoring"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

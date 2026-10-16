@@ -1,0 +1,16 @@
+{
+  "source": "notion",
+  "syncedBy": "notion-skills-github-sync",
+  "layoutVersion": 1,
+  "notion": {
+    "env": "prod",
+    "skillsDataSourceId": "3fb2b3b7-98a9-808b-8454-000b09aa0f23",
+    "pluginId": "1175fd92-26cb-4a11-93b5-cba8b6a8d572",
+    "url": "https://www.notion.so/p/1175fd9226cb4a1193b5cba8b6a8d572",
+    "versionId": "eded68db28e610f1a067c35be1157f0e3609ba95ab529d78012150682a25bfc1"
+  },
+  "plugin": {
+    "slug": "practice",
+    "name": "practice"
+  }
+}

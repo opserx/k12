@@ -1,0 +1,16 @@
+{
+  "source": "notion",
+  "syncedBy": "notion-skills-github-sync",
+  "layoutVersion": 1,
+  "notion": {
+    "env": "prod",
+    "skillsDataSourceId": "3fb2b3b7-98a9-808b-8454-000b09aa0f23",
+    "pluginId": "fa6cb01c-c63d-4d97-bc24-e0956b42d90c",
+    "url": "https://www.notion.so/p/fa6cb01cc63d4d97bc24e0956b42d90c",
+    "versionId": "c10bc218a22294073289f3494925d4b2b2156f669f3d9c5134a1f65559531a6b"
+  },
+  "plugin": {
+    "slug": "flow",
+    "name": "flow"
+  }
+}

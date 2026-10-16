@@ -1,0 +1,16 @@
+{
+  "source": "notion",
+  "syncedBy": "notion-skills-github-sync",
+  "layoutVersion": 1,
+  "notion": {
+    "env": "prod",
+    "skillsDataSourceId": "3fb2b3b7-98a9-808b-8454-000b09aa0f23",
+    "pluginId": "d35da4b2-56f9-44a5-a65b-7413bb7604dc",
+    "url": "https://www.notion.so/p/d35da4b256f944a5a65b7413bb7604dc",
+    "versionId": "2211ca57721203a050f7a0581d88f1146fbd72732e5648c1cd904d6743ddb200"
+  },
+  "plugin": {
+    "slug": "tutoring",
+    "name": "tutoring"
+  }
+}

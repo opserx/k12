@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "flow",
+  "description": "Skills synced from Notion.",
+  "version": "1.0.0",
+  "author": {
+    "name": "flow"
+  }
+}
