@@ -1,7 +1,7 @@
 {
   "source": "notion",
   "syncedBy": "notion-skills-github-sync",
-  "layoutVersion": 1,
+  "layoutVersion": 2,
   "notion": {
     "env": "prod",
     "skillsDataSourceId": "3fb2b3b7-98a9-808b-8454-000b09aa0f23",

@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tutoring",
   "description": "Skills synced from Notion.",
-  "version": "1.0.0",
+  "version": "1.0.0-notion.2211ca577212",
   "author": {
     "name": "tutoring"
   }

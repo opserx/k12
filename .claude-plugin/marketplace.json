@@ -21,11 +21,6 @@
       "description": "Skills synced from Notion."
     },
     {
-      "name": "skills-ed33994a4c58",
-      "source": "./plugins/skills-ed33994a4c58",
-      "description": "Skills synced from Notion."
-    },
-    {
       "name": "tutoring",
       "source": "./plugins/tutoring",
       "description": "Skills synced from Notion."

@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "practice",
   "description": "Skills synced from Notion.",
-  "version": "1.0.0",
+  "version": "1.0.0-notion.eded68db28e6",
   "author": {
     "name": "practice"
   }
