@@ -2,55 +2,59 @@
 
 [English](./README.en.md) · [GitHub](https://github.com/opserx/k12) · [MIT License](./LICENSE)
 
-这是为中国大陆初中阶段课外辅导准备的一组 Skills。选择下方需要的 skill 安装后，直接在 Agent 中调用即可。
+这是为中国大陆初中阶段课外辅导准备的一组 Skills，以插件市场 `k12-skills` 的形式发布。安装需要的插件后，直接在 Agent 中调用其中的 skill 即可。
+
+## 来源与同步
+
+- Skills 的唯一来源是 Notion 数据库 [月树提示词](https://app.notion.com/p/3fb2b3b798a980a0be07d82401f4c36c)。每个 skill 是其中的一页，`Tags`（`flow`、`practice`、`tutoring`）决定它属于哪个插件。
+- [opserx/notion-skills-github-sync](https://github.com/opserx/notion-skills-github-sync) 每小时把 Notion 中的 skills 同步到本仓库的 `plugins/<tag>/skills/<skill>/`，并更新三个市场清单：`.claude-plugin/marketplace.json`、`.cursor-plugin/marketplace.json`、`.agents/plugins/marketplace.json`。
+- `plugins/` 下的文件由同步生成，不要手工修改；下一次同步会覆盖它们。
 
 ## 安装
 
-本仓库保持“一个 skill 一个目录”的组织方式。使用 [skills.sh](https://skills.sh) 安装后，skill 会成为你本地可查看、可修改的普通文件；它不会在后台自动改动。
-
-### 按需安装
+### Claude Code
 
 ```bash
-npx skills@latest add opserx/k12
+claude plugin marketplace add opserx/k12
+claude plugin install flow@k12-skills
+claude plugin install practice@k12-skills
+claude plugin install tutoring@k12-skills
+claude plugin install notion-skills-updater@k12-skills   # 可选：在 Agent 中修改 skill
 ```
 
-按提示选择需要的 skill 和目标 Agent。
+在 `/plugin` → Marketplaces 中为 `k12-skills` 打开 auto-update，之后会自动收到更新；也可以运行 `claude plugin update flow@k12-skills`。
 
-### 一次安装全部
+### Codex
 
 ```bash
-npx skills@latest add opserx/k12 --skill '*'
+codex plugin marketplace add opserx/k12
+codex plugin add flow@k12-skills
+codex plugin add practice@k12-skills
+codex plugin add tutoring@k12-skills
+codex plugin add notion-skills-updater@k12-skills   # 可选
 ```
 
-这会选择本仓库当前全部 skills；按提示选择要安装到的 Agent。
+### Cursor 与团队工作区
 
-### 升级
+Cursor（Dashboard → Plugins → Team Marketplaces → Import from Repo）和 ChatGPT 工作区（Admin Console → Plugins → Import marketplace）都可以直接导入 `https://github.com/opserx/k12`。
 
-```bash
-npx skills@latest update
-```
+## 插件
 
-这会把通过 `skills.sh` 安装的 skills 更新到各自来源的最新版本；若你同时安装了其他来源的 skills，它们也会一起检查和更新。和 [Matt Pocock 的 skills](https://github.com/mattpocock/skills) 一样，更新由你主动执行，而不会在后台发生。
+| 插件 | Skills | 用途 |
+| --- | --- | --- |
+| `flow` | `k-12-ask-qq`、`k-12-export-enable` | 解释这套 skills 并推荐下一步；为 skill 添加内部导出能力。 |
+| `practice` | `k-12-listening-idea-practice`、`k-12-reading-deepth-english`、`k-12-writing-word-chinese` | 听力中心理解、英语文章精读、中文近义词辨析练习。 |
+| `tutoring` | `k-12-writing-rewrite-chinese`、`k-12-writing-short-chinese` | 中文病文修改、命题片段写作。 |
+| `notion-skills-updater` | `notion-skill-updater` | 通过 Notion MCP 把对 skill 的修改写回 Notion。 |
 
-也可以把所需的 skill 目录复制到 Agent 的 skills 目录中；这种手动安装没有可追踪的来源，之后需要自行比较和更新。
+Notion 导出时会把名称中的 `k12-` 规范为 `k-12-`。
 
-## 当前技能索引
+## 修改 skills
 
-从这里选择适合当前学习需要的 skill。
-
-<!-- current-skill-index:start -->
-| 分类 | Skill | 用途 | 调用方式 |
-| --- | --- | --- | --- |
-| `flow` | [`k12-ask-qq`](./skills/flow/k12-ask-qq/SKILL.md) | 解释这套 skills，并根据当前困惑推荐下一步。 | 用户主动调用 |
-| `practice` | [`k12-listening-idea-practice`](./skills/practice/k12-listening-idea-practice/SKILL.md) | 每天 10–15 分钟的听力中心理解自我练习，可选择四项子练习。 | 可由用户或 Agent 调用 |
-| `practice` | [`k12-reading-deepth-english`](./skills/practice/k12-reading-deepth-english/SKILL.md) | 英语文章精读：识别图片或文本后，用对话提示理解，并按需整理生词表。 | 可由用户或 Agent 调用 |
-| `practice` | [`k12-writing-word-chinese`](./skills/practice/k12-writing-word-chinese/SKILL.md) | 中文近义词和近义成语的三对三填空辨析练习。 | 可由用户或 Agent 调用 |
-| `tutoring` | [`k12-writing-rewrite-chinese`](./skills/tutoring/k12-writing-rewrite-chinese/SKILL.md) | 中文病文修改：辨析信息、节奏和修饰问题，再比较最佳例文。 | 可由用户或 Agent 调用 |
-| `tutoring` | [`k12-writing-short-chinese`](./skills/tutoring/k12-writing-short-chinese/SKILL.md) | 中文命题片段写作：从出题、初稿到修改稿和最佳例文。 | 可由用户或 Agent 调用 |
-<!-- current-skill-index:end -->
+在 Notion 中直接编辑对应页面，或安装 `notion-skills-updater` 后让 Agent 通过 Notion MCP 修改。修改会在下一次同步后出现在本仓库，并以新版本号（`1.0.0-notion.<hash>`）推送给已安装的 Agent。
 
 ## 全局参考资料
 
 | 文件 | 内容 |
 | --- | --- |
-| [`project-conventions.md`](./skills/flow/k12-ask-qq/references/project-conventions.md) | Skills 的分类、命名规则，以及 `namespace`、`aspect`、`subject`、`category` 数据字典。 |
+| [`project-conventions.md`](./plugins/flow/skills/k-12-ask-qq/references/project-conventions.md) | Skills 的分类、命名规则，以及 `namespace`、`aspect`、`subject`、`category` 数据字典。 |

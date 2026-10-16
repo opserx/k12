@@ -1,12 +1,12 @@
 # Contributing
 
-Each skill lives in `skills/<category>/<skill-name>/` and must contain a `SKILL.md`. See [the project conventions](./skills/flow/k12-ask-qq/references/project-conventions.md) for the current categories and data dictionary.
+Skills are authored in the Notion database [月树提示词](https://app.notion.com/p/3fb2b3b798a980a0be07d82401f4c36c), not in this repository. Everything under `plugins/` and the three `marketplace.json` files' plugin lists are generated hourly by [opserx/notion-skills-github-sync](https://github.com/opserx/notion-skills-github-sync); hand edits are overwritten.
 
-- Use lowercase kebab-case names and follow the `k12-aspect-purpose[-subject]` convention in the project conventions.
-- Include YAML frontmatter with `name` and a focused `description`.
-- Keep the entrypoint short and tool-neutral. Put only durable, task-specific guidance in it.
-- Add scripts, references, or assets only when the skill truly needs them.
-- Do not place product-specific manifests in a skill. Adapters belong outside this portable collection.
-- To make a skill exportable, use the internal `k12-export-enable` capability; it adds the skill's own `## 导出` instructions and `references/export-template.md`.
+- Add or edit a skill as a page in the database: `Skill name` and `Description` become the `SKILL.md` frontmatter, the page body becomes its content, and supporting files (references, templates) go in `Files`.
+- Set `Tags` to exactly one category (`flow`, `practice`, `tutoring`); it decides the plugin. An untagged skill becomes a plugin of its own.
+- Follow the `k12-aspect-purpose[-subject]` naming convention in the [project conventions](./plugins/flow/skills/k-12-ask-qq/references/project-conventions.md).
+- Keep the entrypoint short and tool-neutral, understandable without a particular agent product.
+- To make a skill exportable, use the internal `k-12-export-enable` capability.
+- Agents can edit skills through the `notion-skill-updater` skill (plugin `notion-skills-updater`), which writes back via the Notion MCP.
 
-Before opening a pull request, make sure every `SKILL.md` has valid frontmatter and that its instructions are understandable without a particular agent product.
+Only the marketplace identity (`name: k12-skills`, owner, description) and the documentation files are edited in this repository.
