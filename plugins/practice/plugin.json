@@ -1,5 +1,6 @@
 {
-	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-	"name": "practice",
-	"description": ""
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "practice",
+  "description": "",
+  "version": "1.0.0-notion.eded68db28e6"
 }

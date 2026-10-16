@@ -1,5 +1,6 @@
 {
-	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-	"name": "notion-skills-updater",
-	"description": "Edit or create skills by updating their source in Notion (write-back via the Notion MCP)."
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "notion-skills-updater",
+  "description": "Edit or create skills by updating their source in Notion (write-back via the Notion MCP).",
+  "version": "1.0.0-notion.b540a5217374"
 }

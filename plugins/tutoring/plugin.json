@@ -1,5 +1,6 @@
 {
-	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-	"name": "tutoring",
-	"description": ""
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tutoring",
+  "description": "",
+  "version": "1.0.0-notion.2211ca577212"
 }

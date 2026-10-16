@@ -1,5 +1,6 @@
 {
-	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-	"name": "flow",
-	"description": ""
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "flow",
+  "description": "",
+  "version": "1.0.0-notion.c10bc218a222"
 }
