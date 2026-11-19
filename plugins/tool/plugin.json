@@ -2,5 +2,5 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tool",
   "description": "",
-  "version": "1.0.0-notion.e635ad1b044d"
+  "version": "1.0.0-notion.b60cf62ce4ae"
 }
