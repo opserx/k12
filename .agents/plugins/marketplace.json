@@ -17,6 +17,18 @@
       "category": "Productivity"
     },
     {
+      "name": "k12-homework",
+      "source": {
+        "source": "local",
+        "path": "./plugins/k12-homework"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "notion-skills-updater",
       "source": {
         "source": "local",

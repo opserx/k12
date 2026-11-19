@@ -1,0 +1,16 @@
+{
+  "source": "notion",
+  "syncedBy": "notion-skills-github-sync",
+  "layoutVersion": 3,
+  "notion": {
+    "env": "prod",
+    "skillsDataSourceId": "3fb2b3b7-98a9-808b-8454-000b09aa0f23",
+    "pluginId": "41d2b3b7-98a9-80f5-98dd-c5856b37cb6e",
+    "url": "https://www.notion.so/p/41d2b3b798a980f598ddc5856b37cb6e",
+    "versionId": "1cde57e22c9d120a016bcdebd5f3c4a23f6eab748f61e982592dfd4b7473c004"
+  },
+  "plugin": {
+    "slug": "k12-homework",
+    "name": "k12-homework"
+  }
+}

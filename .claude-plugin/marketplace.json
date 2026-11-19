@@ -11,6 +11,11 @@
       "description": "Skills synced from Notion."
     },
     {
+      "name": "k12-homework",
+      "source": "./plugins/k12-homework",
+      "description": "孩子回家的作业流程"
+    },
+    {
       "name": "notion-skills-updater",
       "source": "./plugins/notion-skills-updater",
       "description": "Edit or create skills by updating their source in Notion (write-back via the Notion MCP)."
