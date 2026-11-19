@@ -1,9 +1,0 @@
-{
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "k-12-homework",
-  "description": "孩子回家的作业流程",
-  "version": "1.0.0-notion.1cde57e22c9d",
-  "author": {
-    "name": "k12-homework"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "k-12-check",
-  "description": "检测工具",
-  "version": "1.0.0-notion.00159b41371b",
-  "author": {
-    "name": "k12-check"
-  }
-}

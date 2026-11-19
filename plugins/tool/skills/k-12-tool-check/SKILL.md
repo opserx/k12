@@ -1,8 +1,8 @@
 ---
 name: |-
-  k-12-check
+  k-12-tool-check
 description: |-
-  检测工具
+  检测说明
 notion_page_id: 41d2b3b7-98a9-809c-9a3b-eab1aeb61c0a
 ---
 
@@ -22,6 +22,7 @@ notion_page_id: 41d2b3b7-98a9-809c-9a3b-eab1aeb61c0a
 
 ## 运行环境检测
 
-其他模块调用
+依赖\`k12-tool-mcp\` 技能：
 
+- 先检测服务器是否正常，通过月树mcp工具的\`仅测 TCP 连接与 TLS 握手延迟\`
 - mcp状态是否正常，能够返回工具列表
