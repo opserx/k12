@@ -1,12 +1,12 @@
 ---
 name: |-
-  k-12-homework
+  k-12-flow-daily
 description: |-
   孩子回家的作业流程
 notion_page_id: 41d2b3b7-98a9-80f5-98dd-c5856b37cb6e
 ---
 
-# 回家后一般流程
+# 每日学习流程
 
 ## 输出语言与对象
 
@@ -36,6 +36,10 @@ notion_page_id: 41d2b3b7-98a9-80f5-98dd-c5856b37cb6e
 
 <p />
 
-## 今日日志
+## 学习日志
+
+<p />
+
+## 课堂笔记
 
 <p />
